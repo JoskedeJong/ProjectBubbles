@@ -3,7 +3,7 @@
 
 <head>
 <style>
-    .generatedPart{
+    .generatedElement{
         width: 50px;
         height: 50px;
         background-color: greenyellow;
@@ -15,9 +15,27 @@
 </style>
 
 </head>
-<body>
-    <div class="generatedPart">*</div>
-<script></script>
+<body onload="generator()">
+<script>
+
+var countCounter = 6;
+var y = 0;
+var text = "";
+
+function generator(){
+    do{
+        console.log("blip")
+        var createDiv = document.createElement("div");
+        var createClass = document.createAttribute("class");
+        createClass.value = "generatedElement";
+        createDiv.setAttributeNode(createClass);
+        createDiv.innerHTML = "8";
+        document.body.appendChild(createDiv);
+        y++;
+    }
+    while (y < 6);
+}
+</script>
 </body>
 
 </html>
