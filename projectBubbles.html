@@ -32,12 +32,13 @@ var text = "";
             var createDiv = document.createElement("div");
             var createClass = document.createAttribute("class");
             var createId = document.createAttribute("id" + idNumber);
+            idNumber = idNumber + 5;
             createClass.value = "generatedElement";
             createDiv.setAttributeNode(createClass);
             createDiv.setAttributeNode(createId);
+            createDiv.setAttribute("style", "background-color: rgb(" + idNumber + ", 0,0)");
             createDiv.innerHTML = "8";
             document.body.appendChild(createDiv);
-            idNumber++;
             if (y == 5) {
                 var createBreak = document.createElement("br");
                 document.body.appendChild(createBreak);
