@@ -22,6 +22,7 @@
 var countCounter = 6;
 var y = 0;
 var x = 0;
+var idNumber = 0;
 var text = "";
 
 
@@ -30,10 +31,13 @@ var text = "";
             // console.log("blip")
             var createDiv = document.createElement("div");
             var createClass = document.createAttribute("class");
+            var createId = document.createAttribute("id" + idNumber);
             createClass.value = "generatedElement";
             createDiv.setAttributeNode(createClass);
+            createDiv.setAttributeNode(createId);
             createDiv.innerHTML = "8";
             document.body.appendChild(createDiv);
+            idNumber++;
             if (y == 5) {
                 var createBreak = document.createElement("br");
                 document.body.appendChild(createBreak);
