@@ -32,11 +32,11 @@ var text = "";
             var createDiv = document.createElement("div");
             var createClass = document.createAttribute("class");
             var createId = document.createAttribute("id" + idNumber);
-            idNumber = idNumber + 5;
+            idNumber = idNumber + 4;
             createClass.value = "generatedElement";
             createDiv.setAttributeNode(createClass);
             createDiv.setAttributeNode(createId);
-            createDiv.setAttribute("style", "background-color: rgb(" + idNumber + ", 0,0)");
+            createDiv.setAttribute("style", "background-color: rgb(" + idNumber + ", 0, " + (250 - idNumber) + ")");
             createDiv.innerHTML = "8";
             document.body.appendChild(createDiv);
             if (y == 5) {

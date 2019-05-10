@@ -13,4 +13,6 @@ Goal: dynamically creating a grid with JavaScript
 
 long term goals:
 
-1. \- create functionality to make segments switch place 
+1. \- clean up code. Several instances of setAttributeNode can be replaced by setAttribute
+2. \- create functionality to make segments switch place 
+
