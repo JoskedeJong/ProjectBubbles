@@ -11,30 +11,37 @@
         text-align: center;
         vertical-align: center;
         line-height: 50px;
+        display: inline-block;
     }
 </style>
 
 </head>
-<body onload="generator()">
+<body>
 <script>
 
 var countCounter = 6;
 var y = 0;
+var x = 0;
 var text = "";
 
-function generator(){
-    do{
-        console.log("blip")
-        var createDiv = document.createElement("div");
-        var createClass = document.createAttribute("class");
-        createClass.value = "generatedElement";
-        createDiv.setAttributeNode(createClass);
-        createDiv.innerHTML = "8";
-        document.body.appendChild(createDiv);
-        y++;
-    }
-    while (y < 6);
-}
+
+    for (x = 0; x < 6; x++) {
+        for (y = 0; y < 6; y++) {
+            // console.log("blip")
+            var createDiv = document.createElement("div");
+            var createClass = document.createAttribute("class");
+            createClass.value = "generatedElement";
+            createDiv.setAttributeNode(createClass);
+            createDiv.innerHTML = "8";
+            document.body.appendChild(createDiv);
+            if (y == 5) {
+                var createBreak = document.createElement("br");
+                document.body.appendChild(createBreak);
+            }
+        }
+        var y = 0;
+    } 
+
 </script>
 </body>
 
